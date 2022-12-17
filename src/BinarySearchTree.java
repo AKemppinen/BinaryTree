@@ -32,6 +32,26 @@ public class BinarySearchTree {
         return node;
     }
 
+    public void find(int key) {
+        Node node = find(root, key);
+        if (node == null) {
+            System.out.println("Node doesn't exist in the tree!");
+        } else {
+            System.out.println("Node found: " + node.key);
+        }
+    }
+
+    private Node find(Node node, int key) {
+        if (node == null || node.key == key) {
+            return node;
+        }
+        if (key < node.key) {
+            return find(node.left, key);
+        } else {
+            return find(node.right, key);
+        }
+    }
+
     // Removes an arbitrary node from the tree
     public void remove(int key) {
         root = remove(root, key);

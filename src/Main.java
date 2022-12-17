@@ -23,5 +23,8 @@ public class Main {
         binarySearchTree.printPreorder();
         binarySearchTree.printHeight();
 
+        binarySearchTree.find(1);
+        binarySearchTree.find(4);
+
     }
 }
